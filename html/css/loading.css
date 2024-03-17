@@ -22,5 +22,8 @@ body {
     background-color: green;
     position: absolute;
     z-index: -1;
-    background-image: url("images/bridge.jpg)
+    background-image: url("images/bridge.jpg")
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
