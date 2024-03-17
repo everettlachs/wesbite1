@@ -13,6 +13,7 @@ body {
 .loading-text {
     font-size: 50px;
     color: white;
+    opacity: 1;
 }
 
 
@@ -23,7 +24,7 @@ body {
     background-color: green;
     position: absolute;
     z-index: -1;
-    background-image: url("images/swimming.jpg")
+    background-image: url("cssimages/swimming.jpg")
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
