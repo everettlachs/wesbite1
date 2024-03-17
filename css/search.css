@@ -1,4 +1,7 @@
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: green;
@@ -37,7 +40,7 @@ body {
     transition: width 3s ease;
 }
 
-.search .input:focus{
+.search .input:focus {
     outline: none;
 }
 
