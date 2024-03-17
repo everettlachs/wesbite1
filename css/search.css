@@ -1,9 +1,5 @@
 
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: green;
     height: 100vh;
@@ -11,13 +7,10 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-
 }
 
 .search{
-    height: 200px;
-    position: relative;
-    background-color: blue;
+    height: 50px;
     position: relative;
 }
 
