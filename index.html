@@ -1,14 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Website1</title>
-    </head>
+<head>
+    <title>Website1</title>
+    <style>
+        /* CSS for headings */
+        h1, h2, h3, h4, h5, h6 {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        // JavaScript for wrapping headings in boxes
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all headings (h1 to h6)
+            var headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
-    <body>
-        <h1>This is my website!</h1>
-        <a href="search.html">1. Search</a>
-        <a href="loading.html">2. Loading</a>
-        <a href="expanding.html">3. Expanding</a>
-        <a href="navigation.html">4. Navigation</a>
-    </body>
+            // Loop through each heading
+            headings.forEach(function(heading) {
+                // Create a div element for the box
+                var box = document.createElement("div");
+
+                // Add CSS class for the box
+                box.classList.add("heading-box");
+
+                // Move the heading inside the box
+                box.appendChild(heading.cloneNode(true)); // Cloning to preserve original heading
+
+                // Replace the original heading with the box
+                heading.parentNode.replaceChild(box, heading);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>This is my website!</h1>
+    <a href="search.html">1. Search</a>
+    <a href="loading.html">2. Loading</a>
+    <a href="expanding.html">3. Expanding</a>
+    <a href="navigation.html">4. Navigation</a>
+</body>
 </html>
