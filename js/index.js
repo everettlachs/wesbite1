@@ -13,3 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
         heading.parentNode.replaceChild(box, heading);
     });
 });
+
+// JavaScript for wrapping headings and numbered links in boxes
+
