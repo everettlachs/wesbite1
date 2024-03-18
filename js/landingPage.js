@@ -1,6 +1,7 @@
 toggle = document.getElementById('toggle')
 open = document.getElementById('open')
 model = document.getElementById('model')
+close = document.getElementById('close')
 
 
 toggle.addEventListener('click', () => {
@@ -11,3 +12,6 @@ open.addEventListener('click', () => {
     modal.classList.add('show-modal')
 })
 
+close.addEventListener('click', () => {
+    modal.classList.remove('show-model')
+})
