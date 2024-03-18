@@ -4,43 +4,47 @@
 <head>
     <title>Website1</title>
     <style>
-        /* CSS for headings */
-        h1, h2, h3, h4, h5, h6 {
+        /* CSS for headings and numbered links */
+        h1, h2, h3, h4, h5, h6, .numbered-link {
             padding: 10px;
             margin: 10px 0;
             background-color: #f0f0f0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            display: inline-block;
         }
     </style>
     <script>
-        // JavaScript for wrapping headings in boxes
+        // JavaScript for wrapping headings and numbered links in boxes
         document.addEventListener("DOMContentLoaded", function() {
-            // Select all headings (h1 to h6)
+            // Select all headings (h1 to h6) and numbered links
             var headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+            var numberedLinks = document.querySelectorAll("a[href^='#']");
 
-            // Loop through each heading
+            // Wrap headings in boxes
             headings.forEach(function(heading) {
+                wrapInBox(heading);
+            });
+
+            // Wrap numbered links in boxes
+            numberedLinks.forEach(function(link) {
+                wrapInBox(link);
+            });
+
+            // Function to wrap element in a box
+            function wrapInBox(element) {
                 // Create a div element for the box
                 var box = document.createElement("div");
 
                 // Add CSS class for the box
-                box.classList.add("heading-box");
+                box.classList.add("box");
 
-                // Move the heading inside the box
-                box.appendChild(heading.cloneNode(true)); // Cloning to preserve original heading
+                // Move the element inside the box
+                box.appendChild(element.cloneNode(true)); // Cloning to preserve original element
 
-                // Replace the original heading with the box
-                heading.parentNode.replaceChild(box, heading);
-            });
+                // Replace the original element with the box
+                element.parentNode.replaceChild(box, element);
+            }
         });
     </script>
-</head>
-<body>
-    <h1>This is my website!</h1>
-    <a href="search.html">1. Search</a>
-    <a href="loading.html">2. Loading</a>
-    <a href="expanding.html">3. Expanding</a>
-    <a href="navigation.html">4. Navigation</a>
-</body>
-</html>
+</hea
