@@ -132,7 +132,7 @@ function keyDown(e) {
         ball.dx = 0
         showAllBricks()
     }
-    if (e.key == 'p' || e.key == 'P') {
+    if (e.key == 's' || e.key == 'S') {
         if (paddle.dx == 0) {
             paddle.x = (canvas.width / 2) - (paddle.w / 2)
             ball.x = canvas.width / 2
